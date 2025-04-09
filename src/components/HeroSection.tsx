@@ -61,7 +61,7 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-2xl blur opacity-40"></div>
               <div className="relative bg-card rounded-2xl shadow-xl overflow-hidden aspect-square">
                 <img 
-                  src="/lovable-uploads/91320e22-fd11-4680-9cbb-0e69db6ad5df.png" 
+                  src="/lovable-uploads/79c11c4c-3e8a-409b-9b01-17b96bb43f7c.jpeg" 
                   alt="Profile photo"
                   className="w-full h-full object-cover" 
                 />
