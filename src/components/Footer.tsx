@@ -39,9 +39,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-background/80">San Francisco, CA</li>
-              <li><a href="mailto:hello@example.com" className="text-background/80 hover:text-primary transition-colors">hello@example.com</a></li>
-              <li><a href="tel:+15551234567" className="text-background/80 hover:text-primary transition-colors">+1 (555) 123-4567</a></li>
+              <li className="text-background/80">Lagos, Nigeria</li>
+              <li><a href="mailto:funmilayo.oba@outlook.com" className="text-background/80 hover:text-primary transition-colors">funmilayo.oba@outlook.com</a></li>
+              <li><a href="tel:+2348105406668" className="text-background/80 hover:text-primary transition-colors">+2348105406668</a></li>
             </ul>
           </div>
         </div>

@@ -24,17 +24,17 @@ const ContactSection = () => {
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: 'Location',
-      details: 'San Francisco, CA',
+      details: 'Lagos, Nigeria',
     },
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: 'Email',
-      details: 'hello@example.com',
+      details: 'funmilayo.oba@outlook.com',
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+2348105406668',
     },
   ];
 
