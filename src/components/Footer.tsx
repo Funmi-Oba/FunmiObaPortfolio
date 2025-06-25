@@ -16,13 +16,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">Dev</span>Portfolio
+              <span className="text-primary">Funmilayo</span> Oba
             </div>
             <p className="text-background/80 max-w-md mb-6">
               A front-end developer crafting beautiful web experiences with a focus on performance, accessibility, and responsive design.
             </p>
             <p className="text-background/80">
-              &copy; {new Date().getFullYear()} DevPortfolio. All rights reserved.
+              &copy; {new Date().getFullYear()} Funmilayo Oba. All rights reserved.
             </p>
           </div>
           

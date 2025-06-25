@@ -6,19 +6,44 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Mail, Phone, Send } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
+import { error } from 'console';
+
+ 
+const ServiceID = 'service_8bwmgd9';
+const TemplateID = 'template_qthbbus';
+const PublicKey = 'LyQ3fc2k_jRRqS94S';
 
 const ContactSection = () => {
   const { toast } = useToast();
-
+const formRef = React.useRef<HTMLFormElement | null>(null);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
+   if (!formRef.current) return;
+
+    emailjs.sendForm(ServiceID, TemplateID, formRef.current, PublicKey)
+    .then((response)=>{
+      
+      console.log("Email sent successfully!", response);
+      toast({
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon.",
     });
+    formRef.current.reset();
+  })
+  .catch((error) => {
+    console.error("EmailJS error:", error);
+    toast({
+      title: "Error sending message",
+      description: "There was an issue sending your message. Please try again later.",
+      variant: "destructive",
+    });
+  });
+
     // In a real app, you would send this data to your backend
-    (e.target as HTMLFormElement).reset();
+  //  (e.target as HTMLFormElement).reset();
   };
+
 
   const contactInfo = [
     {
@@ -37,6 +62,7 @@ const ContactSection = () => {
       details: '+2348105406668',
     },
   ];
+
 
   return (
     <section id="contact" className="bg-secondary/50">
@@ -71,7 +97,8 @@ const ContactSection = () => {
               <h3 className="text-xl font-bold mb-4">Follow Me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/Funmi-Oba" 
+                  target='_blank'
                   className="bg-card hover:bg-secondary p-3 rounded-full transition-colors"
                   aria-label="GitHub"
                 >
@@ -88,7 +115,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/funmilayo-oba/" 
+                  target='_blank'
                   className="bg-card hover:bg-secondary p-3 rounded-full transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -105,7 +133,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://x.com/FunmiOba1" 
+                  target='_blank'
                   className="bg-card hover:bg-secondary p-3 rounded-full transition-colors"
                   aria-label="Twitter"
                 >
@@ -122,7 +151,8 @@ const ContactSection = () => {
                   </svg>
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/funmioba_?igsh=MTJwd3c5djg4cmZhZQ%3D%3D&utm_source=qr" 
+                  target='_blank'
                   className="bg-card hover:bg-secondary p-3 rounded-full transition-colors"
                   aria-label="Instagram"
                 >
@@ -144,7 +174,7 @@ const ContactSection = () => {
           
           <div>
             <h3 className="heading-md mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-medium">
@@ -152,6 +182,7 @@ const ContactSection = () => {
                   </label>
                   <Input 
                     id="name" 
+                    name='name'
                     placeholder="Your name" 
                     required 
                   />
@@ -162,6 +193,7 @@ const ContactSection = () => {
                   </label>
                   <Input 
                     id="email"
+                    name='email'
                     type="email" 
                     placeholder="Your email" 
                     required 
@@ -174,6 +206,8 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   id="subject" 
+                  name='subject'
+                  type='text'
                   placeholder="Subject" 
                   required 
                 />
@@ -184,6 +218,7 @@ const ContactSection = () => {
                 </label>
                 <Textarea 
                   id="message" 
+                  name='message'
                   placeholder="Your message" 
                   required 
                   rows={5}
@@ -199,6 +234,6 @@ const ContactSection = () => {
       </div>
     </section>
   );
-};
 
+}
 export default ContactSection;

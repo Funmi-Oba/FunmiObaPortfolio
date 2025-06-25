@@ -17,8 +17,9 @@ const HeroSection = () => {
               Crafting Beautiful <span className="text-primary">Web Experiences</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl">
-              I design and build responsive, accessible, and performant web applications 
-              that deliver exceptional user experiences.
+           I build fast, responsive, and scalable web apps using React, Next.js, and Tailwind CSS. 
+           With clean code and a focus on performance, I turn ideas into smooth, user-friendly digital 
+           experiences.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
@@ -30,7 +31,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-4 pt-6">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Funmi-Oba" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
@@ -39,7 +40,7 @@ const HeroSection = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/funmilayo-oba/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors"
@@ -48,7 +49,7 @@ const HeroSection = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:hello@example.com" 
+                href="mailto:funmilayo.oba@outlook.com" 
                 className="text-primary hover:text-primary/80 transition-colors"
                 aria-label="Email"
               >
@@ -61,7 +62,7 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-2xl blur opacity-40"></div>
               <div className="relative bg-card rounded-2xl shadow-xl overflow-hidden aspect-square">
                 <img 
-                  src="/lovable-uploads/79c11c4c-3e8a-409b-9b01-17b96bb43f7c.jpeg" 
+                  src="/lovable-uploads/PFUN-new.png" 
                   alt="Profile photo"
                   className="w-full h-full object-cover" 
                 />

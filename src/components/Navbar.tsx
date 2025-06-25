@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -8,10 +7,10 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -23,26 +22,31 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        isScrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled
+          ? "bg-background/90 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl md:text-2xl font-bold text-foreground">
-              <span className="text-primary">Dev</span>Portfolio
+            <a
+              href="#home"
+              className="text-xl md:text-2xl font-bold text-foreground"
+            >
+              <span className="text-primary">Hi, I'm </span>Funmilayo Oba
             </a>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
@@ -55,15 +59,24 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button>Resume</Button>
+              <Button asChild className="w-full">
+                <a
+                href="/FunmiObaResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                
+              >
+                Resume
+              </a>
+                </Button>
             </div>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -88,7 +101,18 @@ const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Resume</Button>
+              
+                <Button asChild className="w-full">
+                <a
+                href="/FunmiObaResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                
+              >
+                Resume
+              </a>
+                </Button>
+              
             </div>
           </div>
         </div>
