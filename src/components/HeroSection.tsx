@@ -57,7 +57,7 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center items-center">
+          <div className=" lg:flex justify-center items-center">
             <div className="relative w-full max-w-md">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-2xl blur opacity-40"></div>
               <div className="relative bg-card rounded-2xl shadow-xl overflow-hidden aspect-square">
