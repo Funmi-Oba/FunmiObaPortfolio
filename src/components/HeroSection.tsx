@@ -16,7 +16,7 @@ const HeroSection = () => {
             <h1 className="heading-xl text-foreground">
               Crafting Beautiful <span className="text-primary">Web Experiences</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl">
+            <p className="text-lg text-justify text-muted-foreground max-w-xl">
            I build fast, responsive, and scalable web apps using React, Next.js, and Tailwind CSS. 
            With clean code and a focus on performance, I turn ideas into smooth, user-friendly digital 
            experiences.
@@ -62,7 +62,7 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-2xl blur opacity-40"></div>
               <div className="relative bg-card rounded-2xl shadow-xl overflow-hidden aspect-square">
                 <img 
-                  src="/lovable-uploads/PFUN-new.png" 
+                  src="/images/PFUN-new.png" 
                   alt="Profile photo"
                   className="w-full h-full object-cover" 
                 />

@@ -38,12 +38,17 @@ const Navbar = () => {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex-shrink-0">
+          <div className="flex items-center gap-x-2 flex-shrink-0">
+            <img
+              src="/images/FunmiObalogo.png"
+              alt="logo"
+              className="w-12 h-12 top-0"
+            />
             <a
               href="#home"
-              className="text-xl md:text-2xl font-bold text-foreground"
+              className="top-4 text-xl md:text-2xl font-bold text-foreground"
             >
-              <span className="text-primary">Hi, I'm </span>Funmilayo Oba
+              Hi, I'm <span className="text-primary">Funmilayo</span> Oba
             </a>
           </div>
 

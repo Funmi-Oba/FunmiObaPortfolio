@@ -76,7 +76,7 @@ const AboutSection = () => {
 
           <div>
             <h3 className="heading-md mb-6">My Story</h3>
-            <div className="prose prose-blue max-w-none">
+            <div className="prose prose-blue max-w-none text-justify">
               <p className="mb-4">
                 My journey into tech began with a curiosity about how websites
                 are built and a desire to create digital experiences that truly
@@ -86,7 +86,7 @@ const AboutSection = () => {
               </p>
               <p className="mb-4">
                 Over time, I’ve grown more confident working with modern tools
-                like React, Next.js, and Tailwind CSS—focusing on performance,
+                like React, Next.js, and Tailwind CSS-focusing on performance,
                 usability, and code that scales. I enjoy building solutions that
                 are not only visually engaging but also reliable across devices.
               </p>
@@ -112,7 +112,7 @@ const AboutSection = () => {
                   {service.icon}
                 </div>
                 <h4 className="font-bold text-lg mb-2">{service.title}</h4>
-                <p className="text-muted-foreground">{service.description}</p>
+                <p className="text-muted-foreground ">{service.description}</p>
               </div>
             ))}
           </div>
