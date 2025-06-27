@@ -1,6 +1,6 @@
 
 # 💼 Welcome to My Portfolio 
-This repository is part of my personal portfolio, created to showcase my passion for excellent web experiences and Kingdom-centered creativity.
+This repository is part of my personal portfolio, created to showcase my passion for excellent web experiences and creativity."
 
 🌍 Live Project
 # URL: funmilayooba.vercel.app
