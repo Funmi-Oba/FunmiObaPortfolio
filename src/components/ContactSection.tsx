@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Mail, Phone, Send } from 'lucide-react';
+import { MapPin, Mail, Phone, Send, UserRound, MessageCircleHeart, Captions } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
 import { error } from 'console';
+import { Caption } from 'react-day-picker';
 
  
 const ServiceID = 'service_8bwmgd9';
@@ -177,8 +178,9 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium">
-                    Name
+                  <label htmlFor="name" className="flex text-sm font-medium">
+                   <UserRound className='rounded-full text-primary mr-2 h-5 w-5'/>
+                   Name
                   </label>
                   <Input 
                     id="name" 
@@ -188,8 +190,9 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium">
-                    Email
+                  <label htmlFor="email" className="flex text-sm font-medium">
+                   <Mail className="rounded-full text-primary mr-2 h-5 w-5"/>
+                   Email
                   </label>
                   <Input 
                     id="email"
@@ -201,7 +204,8 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="subject" className="block text-sm font-medium">
+                <label htmlFor="subject" className="flex text-sm font-medium">
+                  <Captions className="rounded-full text-primary mr-2 h-5 w-5"/>
                   Subject
                 </label>
                 <Input 
@@ -213,8 +217,9 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-medium">
-                  Message
+                <label htmlFor="message" className="flex text-sm font-medium">
+                 <MessageCircleHeart className="rounded-full text-primary mr-2 h-5 w-5"/>
+                 Message
                 </label>
                 <Textarea 
                   id="message" 
