@@ -3,7 +3,7 @@
 This repository is part of my personal portfolio, created to showcase my passion for excellent web experiences and creativity."
 
 🌍 Live Project
-# URL: funmilayooba.vercel.app
+# URL: https://funmilayooba.vercel.app
 
 # 🛠️ Tech Stack
 This project is built with:
@@ -22,6 +22,6 @@ This project is deployed using Vercel — a reliable platform for frontend devel
 # 📬 Contact Me
 I'm open to collaboration, freelance opportunities, and meaningful conversations in the world of tech and design.
 - 📧 Email: funmilayo.oba@outlook.com
-- 🌐 Website: funmilayooba.vercel.app
+- 🌐 Website: https://funmilayooba.vercel.app
 - 💼 LinkedIn: https://www.linkedin.com/in/funmilayo-oba/
 
