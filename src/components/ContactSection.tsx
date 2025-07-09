@@ -7,8 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Mail, Phone, Send, UserRound, MessageCircleHeart, Captions } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import emailjs from 'emailjs-com';
-import { error } from 'console';
-import { Caption } from 'react-day-picker';
+import { motion } from 'framer-motion';
 
  
 const ServiceID = 'service_8bwmgd9';
@@ -41,8 +40,6 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
     });
   });
 
-    // In a real app, you would send this data to your backend
-  //  (e.target as HTMLFormElement).reset();
   };
 
 
@@ -65,8 +62,15 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
   ];
 
 
-  return (
-    <section id="contact" className="bg-secondary/50">
+  return (  
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.2 }} // fades in when 20% is visible
+      id="contact"
+      className="bg-background"
+    >
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="heading-lg mb-4">Get In Touch</h2>
@@ -237,7 +241,7 @@ const formRef = React.useRef<HTMLFormElement | null>(null);
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 
 }

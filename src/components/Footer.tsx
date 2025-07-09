@@ -26,9 +26,7 @@ const Footer = () => {
             <p className="text-background/80 max-w-md mb-6">
               A front-end developer crafting beautiful web experiences with a focus on performance, accessibility, and responsive design.
             </p>
-            <p className="text-background/80">
-              &copy; {new Date().getFullYear()} Funmilayo Oba. All rights reserved.
-            </p>
+           
           </div>
           
           <div>
@@ -52,9 +50,9 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-background/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-background/60 text-sm">
-            Designed and built with React & Tailwind CSS
-          </p>
+           <p className="text-background/80">
+              &copy; {new Date().getFullYear()} Funmilayo Oba. All rights reserved.
+            </p>
           <button 
             onClick={scrollToTop}
             className="mt-4 md:mt-0 p-2 rounded-full bg-primary/20 hover:bg-primary/30 transition-colors"

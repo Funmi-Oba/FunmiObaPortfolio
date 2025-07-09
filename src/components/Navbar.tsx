@@ -1,10 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [text] = useTypewriter({ // Using react-simple-typewriter to animate the text
+  words: ["Hi, I'm Funmilayo Oba"],
+  loop: true,
+  typeSpeed: 80,
+  deleteSpeed: 50,
+  delaySpeed: 3000,
+});
+
+const formatText = () => { // Function to format the text with "Funmilayo" highlighted
+  if (text.includes("Funmilayo")) {
+    const [before, after] = text.split("Funmilayo");
+    return (
+      <>
+        {before}
+        <span className="text-primary">Funmilayo</span>
+        {after}
+      </>
+    );
+  }
+  return text;
+};
+
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -48,7 +72,7 @@ const Navbar = () => {
               href="#home"
               className="top-4 text-xl md:text-2xl font-bold text-foreground"
             >
-              Hi, I'm <span className="text-primary">Funmilayo</span> Oba
+              {formatText()}<Cursor cursorStyle="|" />
             </a>
           </div>
 
@@ -66,14 +90,13 @@ const Navbar = () => {
               ))}
               <Button asChild className="w-full">
                 <a
-                href="/FunmiObaResume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                
-              >
-                Resume
-              </a>
-                </Button>
+                  href="/FunmiObaResume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -106,18 +129,15 @@ const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              
-                <Button asChild className="w-full">
+              <Button asChild className="w-full">
                 <a
-                href="/FunmiObaResume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                
-              >
-                Resume
-              </a>
-                </Button>
-              
+                  href="/FunmiObaResume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+              </Button>
             </div>
           </div>
         </div>

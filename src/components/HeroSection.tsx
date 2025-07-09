@@ -1,5 +1,6 @@
 
 import React from 'react';
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -22,7 +23,7 @@ const HeroSection = () => {
            experiences.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 animate-bounce">
                 <a href="#projects">View My Work</a>
               </Button>
               <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
@@ -60,7 +61,7 @@ const HeroSection = () => {
           <div className=" lg:flex justify-center items-center">
             <div className="relative w-full max-w-md">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/70 rounded-2xl blur opacity-40"></div>
-              <div className="relative bg-card rounded-2xl shadow-xl overflow-hidden aspect-square">
+              <div className="relative bg-card animate-fade-in rounded-2xl shadow-xl overflow-hidden aspect-square">
                 <img 
                   src="/images/PFUN-new.png" 
                   alt="Profile photo"
