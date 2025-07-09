@@ -96,9 +96,10 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {skills.map((skillGroup, index) => (
                  <Tilt
-                tiltMaxAngleX={10} //
-                tiltMaxAngleY={10} //
-                glareEnable={false}
+                tiltMaxAngleX={30} // for angle of tilt on X-axis
+                tiltMaxAngleY={30}  // for angle of tilt on Y-axis
+                glarePosition="all" // to apply glare effect on all sides
+                glareEnable={true} 
                 transitionSpeed={1000}
                 className="w-full"
               >
