@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
 
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({

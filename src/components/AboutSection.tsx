@@ -46,7 +46,7 @@ const AboutSection = () => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }} // fades in when 20% is visible
+      viewport={{ once: false, amount: 0.1}} // fades in when 10% is visible
       id="about"
       className="bg-secondary/50"
     >
@@ -83,10 +83,8 @@ const AboutSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="heading-lg mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground">
-            I’m a passionate front-end developer dedicated to creating clean,
-            responsive, and user-friendly web experiences. I focus on writing
-            scalable code and building intuitive interfaces that look great and
-            perform even better.
+            I’m a passionate front-end developer with a B.Sc. in Computer Science, dedicated to creating clean,
+            responsive, and user-friendly web experiences. 
           </p>
         </div>
 
