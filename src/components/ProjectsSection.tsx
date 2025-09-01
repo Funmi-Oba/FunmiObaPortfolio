@@ -43,38 +43,48 @@ const projects = [
     codeUrl: "https://github.com/Funmi-Oba/FunmiObaPortfolio",
     categories: ["React", "TypeScript", "CSS"],
   },
+  // {
+  //   title: "Pursfi- Revolutionizing Digital Payments",
+  //   description:
+  //     "Pursfi is a modern financial platform designed to streamline and secure your digital transactions. Whether you're an individual or a business.",
+  //   image: "images/pursfi.png",
+  //   technologies: ["NextJs", "Tailwind CSS", "Framer Motion"],
+  //   demoUrl: "https://pursfi-home.vercel.app/",
+  //   codeUrl: "",
+  //   categories: ["NextJs", "Tailwind CSS", "Framer Motion" ],
+  // },
   {
-    title: "Pursfi- Revolutionizing Digital Payments",
+    title: "Royalty Ladies Conference Website",
     description:
-      "Pursfi is a modern financial platform designed to streamline and secure your digital transactions. Whether you're an individual or a business.",
-    image: "images/pursfi.png",
+      "The official website for the Royalty Ladies Conference 1.0, featuring event details, speaker profiles, registration forms, and merchandise information.",
+    image: "images/royaltyladies.png",
     technologies: ["NextJs", "Tailwind CSS", "Framer Motion"],
-    demoUrl: "https://pursfi-home.vercel.app/",
+    demoUrl: "https://royaltyladies.vercel.app/",
     codeUrl: "",
     categories: ["NextJs", "Tailwind CSS", "Framer Motion" ],
   },
 
-  {
-    title: "Weather Application",
-    description:
-      "A weather forecast app with location search and animated visualizations.",
-    image: "/images/weather.jpg",
-    technologies: ["React", "CSS", "API Integration"],
-    demoUrl: "InProgress",
-    codeUrl: "InProgress",
-    categories: ["React", "CSS"],
-  },
+  // {
+  //   title: "Weather Application",
+  //   description:
+  //     "A weather forecast app with location search and animated visualizations.",
+  //   image: "/images/weather.jpg",
+  //   technologies: ["React", "CSS", "API Integration"],
+  //   demoUrl: "InProgress",
+  //   codeUrl: "InProgress",
+  //   categories: ["React", "CSS"],
+  // },
 
-  {
-    title: "Destiny House Church Website",
-    description:
-      "A modern, responsive website designed for Destiny House Church to showcase sermons, events, and ministry activities with a clean user experience and mobile-first layout.",
-    image: "/images/dhweb.png",
-    technologies: ["React", "TypeScript", "Redux"],
-    demoUrl: "InProgress",
-    codeUrl: "InProgress",
-    categories: ["React", "TypeScript", "Tailwind CSS"],
-  },
+  // {
+  //   title: "Destiny House Church Website",
+  //   description:
+  //     "A modern, responsive website designed for Destiny House Church to showcase sermons, events, and ministry activities with a clean user experience and mobile-first layout.",
+  //   image: "/images/dhweb.png",
+  //   technologies: ["React", "TypeScript", "Redux"],
+  //   demoUrl: "InProgress",
+  //   codeUrl: "InProgress",
+  //   categories: ["React", "TypeScript", "Tailwind CSS"],
+  // },
   
 ];
 
