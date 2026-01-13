@@ -131,7 +131,7 @@ const formatText = () => { // Function to format the text with "Funmilayo" highl
             <div className="px-3 py-2">
               <Button asChild className="w-full">
                 <a
-                  href="/Funmilayo_Oba_Frontend_Developer_CV.pdf"
+                  href="/FunmiObaResume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
