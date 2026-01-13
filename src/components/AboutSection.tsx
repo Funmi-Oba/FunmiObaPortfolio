@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 const skills = [
   { category: "Languages", items: ["JavaScript (ES6+)", "HTML5", "CSS3"] },
-  { category: "Frameworks", items: ["React", "Next.js", "TailwindCSS"] },
+  { category: "Frameworks", items: ["Vue","React", "Next.js", "TailwindCSS"] },
   { category: "Tools", items: ["Git", "VS Code", "npm", "GitHub Pages"] },
   {
     category: "Other",
@@ -52,9 +52,9 @@ const AboutSection = () => {
     >
       <div className="section-container">
         <div className="mb-20">
-          <h3 className="heading-md text-center mb-10">Services I Offer</h3>
+          <h3 className="mb-10 text-center heading-md">Services I Offer</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <Tilt
                 tiltMaxAngleX={10}
@@ -65,12 +65,12 @@ const AboutSection = () => {
               >
                 <div
                   key={index}
-                  className="bg-card rounded-lg p-6 shadow-sm card-hover"
+                  className="p-6 rounded-lg shadow-sm bg-card card-hover"
                 >
-                  <div className="mb-4 p-3 bg-primary/10 inline-block rounded-lg">
+                  <div className="inline-block p-3 mb-4 rounded-lg bg-primary/10">
                     {service.icon}
                   </div>
-                  <h4 className="font-bold text-lg mb-2">{service.title}</h4>
+                  <h4 className="mb-2 text-lg font-bold">{service.title}</h4>
                   <p className="text-muted-foreground ">
                     {service.description}
                   </p>
@@ -80,18 +80,18 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="heading-lg mb-4">About Me</h2>
+        <div className="max-w-3xl mx-auto mb-10 text-center">
+          <h2 className="mb-4 heading-lg">About Me</h2>
           <p className="text-lg text-muted-foreground">
             I’m a passionate front-end developer with a B.Sc. in Computer Science, dedicated to creating clean,
             responsive, and user-friendly web experiences. 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ">
+        <div className="grid items-start grid-cols-1 gap-12 lg:grid-cols-2 ">
           <div>
-            <h3 className="heading-md mb-6">My Skills</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h3 className="mb-6 heading-md">My Skills</h3>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               {skills.map((skillGroup, index) => (
                  <Tilt
                 tiltMaxAngleX={30} // for angle of tilt on X-axis
@@ -101,8 +101,8 @@ const AboutSection = () => {
                 transitionSpeed={1000}
                 className="w-full"
               >
-                <div key={index} className="bg-card rounded-lg p-6 shadow-sm">
-                  <h4 className="font-bold text-lg mb-4 text-primary">
+                <div key={index} className="p-6 rounded-lg shadow-sm bg-card">
+                  <h4 className="mb-4 text-lg font-bold text-primary">
                     {skillGroup.category}
                   </h4>
                   <ul className="space-y-2">
@@ -121,8 +121,8 @@ const AboutSection = () => {
           </div>
 
           <div>
-            <h3 className="heading-md mb-6">My Story</h3>
-            <div className="prose prose-blue max-w-none text-justify">
+            <h3 className="mb-6 heading-md">My Story</h3>
+            <div className="prose text-justify prose-blue max-w-none">
               <p className="mb-4">
                 My journey into tech began with a curiosity about how websites
                 are built and a desire to create digital experiences that truly
