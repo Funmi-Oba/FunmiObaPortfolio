@@ -15,6 +15,9 @@ import { motion } from "framer-motion";
 const projectCategories = [
   "All",
   "React",
+  "Vue",
+  "VueX",
+  "Pinia",
   "TypeScript",
   "Tailwind CSS",
   "NextJs",
@@ -22,6 +25,26 @@ const projectCategories = [
 ];
 
 const projects = [
+  {
+    title: "Exclusive",
+    description:
+      "A full featured e commerce web application with product listings, cart, and checkout interface.",
+    image: "/images/Exclusive.png",
+    technologies: ["Vue", "Tailwind CSS", "VueX", "Pinia"],
+    demoUrl: "https://exclusive-ecommerce-nu.vercel.app/",
+    codeUrl: "https://github.com/Funmi-Oba/Exclusive-ECommerce",
+    categories: ["Vue", "VueX", "Pinia", "Tailwind CSS"],
+  },
+  {
+    title: "Get-Change",
+    description:
+      "An admin dashboard to monitor and manage staff activities and task status.",
+    image: "/images/GetChange.png",
+    technologies: ["Vue", "Tailwind CSS"],
+    demoUrl: "https://get-change-one.vercel.app/",
+    codeUrl: "https://github.com/Funmi-Oba/GetChange",
+    categories: ["Vue", "Tailwind CSS"],
+  },
   {
     title: "Kayode Olawoye Ministries Website",
     description:
@@ -110,8 +133,8 @@ const ProjectsSection = () => {
       className="bg-background"
     >
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="heading-lg mb-4 ">My Projects</h2>
+        <div className="max-w-3xl mx-auto mb-16 text-center">
+          <h2 className="mb-4 heading-lg ">My Projects</h2>
           <p className="text-lg text-muted-foreground">
             Explore my latest work and personal projects. Each project
             represents different skills and approaches to solving real-world
@@ -133,10 +156,10 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => (
-            <Card key={index} className="overflow-hidden card-hover relative">
-              <div className="aspect-video w-full overflow-hidden bg-muted">
+            <Card key={index} className="relative overflow-hidden card-hover">
+              <div className="w-full overflow-hidden aspect-video bg-muted">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -144,7 +167,7 @@ const ProjectsSection = () => {
                     setSelectedImage(project.image);
                     setIsImageOpen(true);
                   }}
-                  className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 cursor-pointer hover:scale-105"
                 />
               </div>
               <CardHeader>
@@ -167,7 +190,7 @@ const ProjectsSection = () => {
                     target="_blank" 
                     rel="noopener noreferrer" 
                   >
-                    <Github className="mr-2 h-4 w-4" /> Code
+                    <Github className="w-4 h-4 mr-2" /> Code
                   </a>
                 </Button>
                 <Button size="sm" asChild>
@@ -176,14 +199,14 @@ const ProjectsSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                    <ExternalLink className="w-4 h-4 mr-2" /> Demo
                   </a>
                 </Button>
               </CardFooter>
               {project.demoUrl === "InProgress" && (
-                <div className="absolute inset-0 bg-black bg-opacity-50 z-20 pt-32 flex flex-col items-center justify-start text-center px-4">
-                  <p className="text-white text-lg font-semibold mb-2 ">
-                    <Loader className="w-5 h-5 text-white inline-block mr-2 animate-spin" />
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-start px-4 pt-32 text-center bg-black bg-opacity-50">
+                  <p className="mb-2 text-lg font-semibold text-white ">
+                    <Loader className="inline-block w-5 h-5 mr-2 text-white animate-spin" />
                     Project in progress...
                   </p>
                 </div>
@@ -193,17 +216,17 @@ const ProjectsSection = () => {
 
           {isImageOpen && (
             <div
-              className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
               onClick={() => setIsImageOpen(false)}
             >
               <button
                 onClick={() => setIsImageOpen(false)}
-                className="absolute top-12 right-12 text-white font-bold text-4xl "
+                className="absolute text-4xl font-bold text-white top-12 right-12 "
               >
                 &times;
               </button>
               <div
-                className="max-w-4xl w-full p-4 relative"
+                className="relative w-full max-w-4xl p-4"
                 onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
               >
                 <img
