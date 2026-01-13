@@ -60,17 +60,17 @@ const formatText = () => { // Function to format the text with "Funmilayo" highl
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-x-2 flex-shrink-0">
+          <div className="flex items-center flex-shrink-0 gap-x-2">
             <img
               src="/images/FunmiObalogo.png"
               alt="logo"
-              className="w-12 h-12 top-0"
+              className="top-0 w-12 h-12"
             />
             <a
               href="#home"
-              className="top-4 text-xl md:text-2xl font-bold text-foreground"
+              className="text-xl font-bold top-4 md:text-2xl text-foreground"
             >
               {formatText()}<Cursor cursorStyle="|" />
             </a>
@@ -78,7 +78,7 @@ const formatText = () => { // Function to format the text with "Funmilayo" highl
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
+            <div className="flex items-center ml-10 space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -122,7 +122,7 @@ const formatText = () => { // Function to format the text with "Funmilayo" highl
               <a
                 key={link.name}
                 href={link.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary"
+                className="block px-3 py-2 text-base font-medium rounded-md text-foreground hover:bg-secondary"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
@@ -131,7 +131,7 @@ const formatText = () => { // Function to format the text with "Funmilayo" highl
             <div className="px-3 py-2">
               <Button asChild className="w-full">
                 <a
-                  href="/FunmiObaResume.pdf"
+                  href="/Funmilayo_Oba_Frontend_Developer_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
